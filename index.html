@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silverplate | Prospection événementielle</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=2">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#"><img src="assets/logo.png" alt="Silverplate Services"></a>
+  <nav id="nav">
+    <a href="#ao" data-t="ao">Appels d'offres</a>
+    <a href="#cal" data-t="cal">Calendrier</a>
+    <a href="#contacts" data-t="contacts">Contacts stand</a>
+    <a href="#dossiers" data-t="dossiers">Dossiers de stand</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-txt">
+    <p class="eyebrow">Prospection événementielle, Abidjan</p>
+    <h1>Où se gagnent les prochains événements.</h1>
+    <p class="lead">Les appels d'offres ouverts, les grands rendez-vous d'Abidjan jusqu'à fin 2027, la bonne personne à qui écrire pour chaque stand, et une fiche pour décider en cinq minutes.</p>
+    <div class="kpis" id="kpis"></div>
+  </div>
+  <figure class="hero-img"><img src="assets/hero.jpg" alt="Stand réalisé par Silverplate"><figcaption>Stand réalisé par Silverplate</figcaption></figure>
+</section>
+
+<main>
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-t="ao"><b id="n-ao"></b>Appels d'offres</button>
+    <button class="tab" data-t="cal"><b id="n-cal"></b>Calendrier</button>
+    <button class="tab" data-t="contacts"><b id="n-co"></b>Contacts stand</button>
+    <button class="tab" data-t="dossiers"><b id="n-do"></b>Dossiers de stand</button>
+  </div>
+  <section id="ao" class="bloc onglet actif">
+    <div class="bloc-h">
+      <div><p class="eyebrow"><b>01</b> Appels d'offres</p><h2>Les marchés événementiels publiés</h2>
+      <p class="sub">Côte d'Ivoire d'abord, puis la sous-région. Chaque ligne renvoie à l'avis officiel.</p></div>
+      <div class="filtres" id="f-ao"></div>
+    </div>
+    <div id="ao-list" class="cards"></div>
+  </section>
+
+  <section id="cal" class="bloc onglet">
+    <div class="bloc-h">
+      <div><p class="eyebrow"><b>02</b> Calendrier</p><h2>Les grands événements d'Abidjan</h2>
+      <p class="sub">Par trimestre ou par semestre. L'agence n'est indiquée que si une source publique la nomme.</p></div>
+      <div class="filtres" id="f-cal"></div>
+    </div>
+    <div id="cal-list"></div>
+  </section>
+
+  <section id="contacts" class="bloc onglet">
+    <div class="bloc-h">
+      <div><p class="eyebrow"><b>03</b> Contacts stand</p><h2>À qui écrire pour chaque salon</h2>
+      <p class="sub">Uniquement des adresses publiées par l'organisateur, avec la page où elles figurent.</p></div>
+      <div class="filtres"><input id="q" type="search" placeholder="Chercher un salon, un organisateur"></div>
+    </div>
+    <div id="co-list" class="cards"></div>
+  </section>
+
+  <section id="dossiers" class="bloc onglet">
+    <div class="bloc-h">
+      <div><p class="eyebrow"><b>04</b> Dossiers de stand</p><h2>Une fiche par salon pour décider</h2>
+      <p class="sub">Surface, coût publié, public, intérêt pour Silverplate. La décision se coche et reste sur ce téléphone.</p></div>
+      <div class="filtres" id="f-do"></div>
+    </div>
+    <div id="do-list" class="dossiers"></div>
+  </section>
+</main>
+
+<footer class="pied">
+  <img src="assets/logo.png" alt="">
+  <p>Sources publiques relues le <span id="maj"></span>. Le niveau d'intérêt est notre lecture commerciale, pas une donnée de l'organisateur. Un prix « non publié » se demande à l'organisateur avant toute promesse.</p>
+</footer>
+<script src="assets/data.js?v=2"></script>
+<script src="assets/app.js?v=2"></script>
+</body>
+</html>
